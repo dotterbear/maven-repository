@@ -6,7 +6,7 @@
 
 	<groupId>dotterbear</groupId>
 	<artifactId>repo-java-format</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>repo-java-format</name>
 	<description>Repo for java format</description>
 
