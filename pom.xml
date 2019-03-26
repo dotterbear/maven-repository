@@ -20,5 +20,10 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.deploy.skip>true</maven.deploy.skip>
 	</properties>
+
+	<modules>
+		<module>java-format</module>
+	</modules>
 </project>

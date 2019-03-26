@@ -3,5 +3,5 @@
 ## Build
 
 ```mvn
-mvn deploy
+mvn clean deploy
 ```
