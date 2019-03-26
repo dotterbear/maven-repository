@@ -27,7 +27,7 @@
 			<plugins>
 				<plugin>
 					<groupId>com.cosium.code</groupId>
-      		<artifactId>maven-git-code-format</artifactId>
+    			<artifactId>maven-git-code-format</artifactId>
 					<version>${maven-git-code-format.version}</version>
 					<executions>
 						<execution>
@@ -58,4 +58,5 @@
 				</plugin>
 			</plugins>
 	</build>
+
 </project>
