@@ -10,6 +10,13 @@
 	<name>repo-java-format</name>
 	<description>Repo for java format</description>
 
+	<parent>
+        <groupId>dotterbear</groupId>
+        <artifactId>maven-repository</artifactId>
+        <version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
+    </parent>
+
 	<properties>
 		<java.version>1.8</java.version>
 		<maven-git-code-format.version>1.20</maven-git-code-format.version>
