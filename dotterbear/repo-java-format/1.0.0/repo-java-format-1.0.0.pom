@@ -21,22 +21,30 @@
 	<properties>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<java.version>1.8</java.version>
+		<fmt-maven-plugin.version>2.8</fmt-maven-plugin.version>
 	</properties>
 
 	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>io.spring.javaformat</groupId>
-					<artifactId>spring-javaformat-maven-plugin</artifactId>
-					<version>0.0.7</version>
+					<groupId>com.coveo</groupId>
+					<artifactId>fmt-maven-plugin</artifactId>
+					<version>${fmt-maven-plugin.version}</version>
+					<executions>
+							<execution>
+									<goals>
+											<goal>format</goal>
+									</goals>
+							</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
 			<plugin>
-				<groupId>io.spring.javaformat</groupId>
-				<artifactId>spring-javaformat-maven-plugin</artifactId>
+				<groupId>com.coveo</groupId>
+				<artifactId>fmt-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
