@@ -21,30 +21,30 @@
 	<properties>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<java.version>1.8</java.version>
-		<fmt-maven-plugin.version>2.8</fmt-maven-plugin.version>
+		<maven-git-code-format.version>1.20</maven-git-code-format.version>
 	</properties>
 
 	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>com.coveo</groupId>
-					<artifactId>fmt-maven-plugin</artifactId>
-					<version>${fmt-maven-plugin.version}</version>
+					<groupId>com.cosium.code</groupId>
+					<artifactId>maven-git-code-format</artifactId>
+					<version>${maven-git-code-format.version}</version>
 					<executions>
-							<execution>
-									<goals>
-											<goal>format</goal>
-									</goals>
-							</execution>
+						<execution>
+							<goals>
+								<goal>install-hooks</goal>
+							</goals>
+						</execution>
 					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
 			<plugin>
-				<groupId>com.coveo</groupId>
-				<artifactId>fmt-maven-plugin</artifactId>
+				<groupId>com.cosium.code</groupId>
+				<artifactId>maven-git-code-format</artifactId>
 			</plugin>
 		</plugins>
 	</build>
