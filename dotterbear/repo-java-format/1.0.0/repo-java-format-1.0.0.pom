@@ -9,11 +9,12 @@
 	<version>1.0.0</version>
 	<name>repo-java-format</name>
 	<description>Repo for java format</description>
+	<packaging>pom</packaging>
 
 	<parent>
-        <groupId>dotterbear</groupId>
-        <artifactId>maven-repository</artifactId>
-        <version>1.0.0</version>
+    <groupId>dotterbear</groupId>
+    <artifactId>maven-repository</artifactId>
+    <version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
   </parent>
 
