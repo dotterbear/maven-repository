@@ -26,6 +26,39 @@
 	</properties>
 
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.cosium.code</groupId>
+				<artifactId>maven-git-code-format</artifactId>
+				<version>${maven-git-code-format.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>install-hooks</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>${maven-enforcer-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>[3.5.4,)</version>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 		<pluginManagement>
 			<plugins>
 				<plugin>
