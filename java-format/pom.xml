@@ -25,6 +25,7 @@
 	</properties>
 
 	<build>
+		<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>com.cosium.code</groupId>
@@ -58,6 +59,7 @@
 					</executions>
 				</plugin>
 			</plugins>
+		</pluginManagement>
 	</build>
 
 </project>
