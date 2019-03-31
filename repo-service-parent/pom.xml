@@ -20,6 +20,7 @@
 
 	<properties>
 		<maven.deploy.skip>false</maven.deploy.skip>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<spring-data.version>Hopper-SR10</spring-data.version>
@@ -28,8 +29,7 @@
 		<swagger-models.version>2.0.7</swagger-models.version>
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
 		<jasypt-spring-boot-starter.version>2.1.0</jasypt-spring-boot-starter.version>
-		<default.package.rest>com.dotterbear.service.rest</default.package.rest>
-		<default.package.feign>com.dotterbear.service.feign</default.package.feign>
+		<default.package.rest>com.dotterbear.service</default.package.rest>
 		<mixin-maven-plugin.version>0.1-alpha-39</mixin-maven-plugin.version>
 	</properties>
 
@@ -127,8 +127,8 @@
 							<configuration>
 								<inputSpec>${project.basedir}/src/main/resources/api.yml</inputSpec>
 								<language>spring</language>
-								<output>${project.build.directory}/generated-sources</output>
-								<apiPackage>${default.package.rest}.api</apiPackage>
+								<output>${project.basedir}/gen</output>
+								<apiPackage>${default.package.rest}.rest</apiPackage>
 								<modelPackage>${default.package.rest}.model</modelPackage>
 								<invokerPackage>${default.package.rest}.invoker</invokerPackage>
 								<configOptions>
