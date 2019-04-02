@@ -81,7 +81,7 @@
 					<mixins>
 						<mixin>
 							<groupId>dotterbear</groupId>
-							<artifactId>repo-swagger-config</artifactId>
+							<artifactId>repo-swagger-codegen</artifactId>
 							<version>1.0.0</version>
 						</mixin>
 					</mixins>
