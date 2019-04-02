@@ -60,6 +60,10 @@
 		</dependency>
 		<!-- repo-swagger-codegen -->
 		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-core</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>io.swagger.codegen.v3</groupId>
 			<artifactId>swagger-codegen</artifactId>
 		</dependency>
