@@ -26,6 +26,7 @@
 		<jasypt-spring-boot-starter.version>2.1.0</jasypt-spring-boot-starter.version>
 		<default.package.rest>com.dotterbear.service</default.package.rest>
 		<mixin-maven-plugin.version>0.1-alpha-39</mixin-maven-plugin.version>
+		<repo-swagger-codegen.version>1.0.0</repo-swagger-codegen.version>
 	</properties>
 
 	<dependencies>
@@ -74,21 +75,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>io.swagger.codegen.v3</groupId>
-				<artifactId>swagger-codegen-maven-plugin</artifactId>
-				<version>${mixin-maven-plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					<mixins>
-						<mixin>
-							<groupId>dotterbear</groupId>
-							<artifactId>repo-swagger-codegen</artifactId>
-							<version>1.0.0</version>
-						</mixin>
-					</mixins>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>com.github.odavid.maven.plugins</groupId>
 				<artifactId>mixin-maven-plugin</artifactId>
 				<version>${mixin-maven-plugin.version}</version>
@@ -115,20 +101,28 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>dotterbear</groupId>
+				<artifactId>repo-swagger-codegen</artifactId>
+				<version>1.0.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<url>https://repo.spring.io/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<repositories>
 		<repository>
-			<id>dotterbear-maven-repository</id>
-			<url>https://github.com/dotterbear/maven-repository/raw/master/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
 		</repository>
 	</repositories>
-
 </project>
