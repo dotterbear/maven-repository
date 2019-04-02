@@ -28,6 +28,12 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- https://mvnrepository.com/artifact/io.springfox/springfox-core -->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-core</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
 			<!-- https://mvnrepository.com/artifact/io.swagger/swagger-codegen -->
 			<dependency>
 				<groupId>io.swagger.codegen.v3</groupId>
