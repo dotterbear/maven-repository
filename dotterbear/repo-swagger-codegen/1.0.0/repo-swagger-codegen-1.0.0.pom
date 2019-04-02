@@ -26,51 +26,53 @@
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
 	</properties>
 
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/io.swagger/swagger-codegen -->
-		<dependency>
-			<groupId>io.swagger.codegen.v3</groupId>
-			<artifactId>swagger-codegen</artifactId>
-			<version>${swagger-codegen.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-simple</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
-		<dependency>
-			<groupId>io.swagger.core.v3</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>${swagger-annotations.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.swagger.core.v3</groupId>
-			<artifactId>swagger-models</artifactId>
-			<version>${swagger-models.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>${springfox-swagger2.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>io.swagger</groupId>
-					<artifactId>swagger-annotations</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>io.swagger</groupId>
-					<artifactId>swagger-models</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>${springfox-swagger2.version}</version>
-		</dependency>
-	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/io.swagger/swagger-codegen -->
+			<dependency>
+				<groupId>io.swagger.codegen.v3</groupId>
+				<artifactId>swagger-codegen</artifactId>
+				<version>${swagger-codegen.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-simple</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+			<dependency>
+				<groupId>io.swagger.core.v3</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagger-annotations.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.swagger.core.v3</groupId>
+				<artifactId>swagger-models</artifactId>
+				<version>${swagger-models.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${springfox-swagger2.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>io.swagger</groupId>
+						<artifactId>swagger-annotations</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>io.swagger</groupId>
+						<artifactId>swagger-models</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<pluginManagement>
