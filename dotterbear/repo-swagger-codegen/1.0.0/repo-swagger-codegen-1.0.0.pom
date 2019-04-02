@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>dotterbear</groupId>
+	<artifactId>repo-swagger-codegen</artifactId>
+	<version>1.0.0</version>
+	<name>repo-swagger-codegen</name>
+	<description>Repo for swagger codegen</description>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>dotterbear</groupId>
+		<artifactId>maven-repository</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<properties>
+		<maven.deploy.skip>false</maven.deploy.skip>
+		<java.version>1.8</java.version>
+		<swagger-codegen.version>3.0.5</swagger-codegen.version>
+		<swagger-annotations.version>2.0.7</swagger-annotations.version>
+		<swagger-models.version>2.0.7</swagger-models.version>
+		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+	</properties>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/io.swagger/swagger-codegen -->
+		<dependency>
+			<groupId>io.swagger.codegen.v3</groupId>
+			<artifactId>swagger-codegen</artifactId>
+			<version>${swagger-codegen.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-simple</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger-annotations.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-models</artifactId>
+			<version>${swagger-models.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-swagger2.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>io.swagger</groupId>
+					<artifactId>swagger-annotations</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>io.swagger</groupId>
+					<artifactId>swagger-models</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-swagger2.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>io.swagger.codegen.v3</groupId>
+					<artifactId>swagger-codegen-maven-plugin</artifactId>
+					<version>${swagger-codegen.version}</version>
+					<executions>
+						<execution>
+							<id>swagger-codegen-api</id>
+							<goals>
+								<goal>generate</goal>
+							</goals>
+							<configuration>
+								<inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
+								<language>spring</language>
+								<output>${project.basedir}/gen</output>
+								<apiPackage>${default.package.rest}.rest</apiPackage>
+								<modelPackage>${default.package.rest}.model</modelPackage>
+								<invokerPackage>${default.package.rest}.invoker</invokerPackage>
+								<configOptions>
+									<interfaceOnly>true</interfaceOnly>
+									<java8>true</java8>
+								</configOptions>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
