@@ -26,6 +26,7 @@
 		<jasypt-spring-boot-starter.version>2.1.0</jasypt-spring-boot-starter.version>
 		<default.package.rest>com.dotterbear.service</default.package.rest>
 		<mixin-maven-plugin.version>0.1-alpha-39</mixin-maven-plugin.version>
+		<repo-java-format.version>1.0.0</repo-java-format.version>
 		<repo-swagger-codegen.version>1.0.0</repo-swagger-codegen.version>
 	</properties>
 
@@ -59,10 +60,6 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- repo-swagger-codegen -->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-core</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>io.swagger.codegen.v3</groupId>
 			<artifactId>swagger-codegen</artifactId>
@@ -110,12 +107,12 @@
 						<mixin>
 							<groupId>dotterbear</groupId>
 							<artifactId>repo-java-format</artifactId>
-							<version>1.0.0</version>
+							<version>${repo-java-format.version}</version>
 						</mixin>
 						<mixin>
 							<groupId>dotterbear</groupId>
 							<artifactId>repo-swagger-codegen</artifactId>
-							<version>1.0.0</version>
+							<version>${repo-swagger-codegen.version}</version>
 						</mixin>
 					</mixins>
 				</configuration>
@@ -135,7 +132,7 @@
 			<dependency>
 				<groupId>dotterbear</groupId>
 				<artifactId>repo-swagger-codegen</artifactId>
-				<version>1.0.0</version>
+				<version>${repo-swagger-codegen.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
