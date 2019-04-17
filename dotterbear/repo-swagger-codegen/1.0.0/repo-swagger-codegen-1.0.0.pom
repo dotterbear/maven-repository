@@ -14,7 +14,7 @@
 		<groupId>dotterbear</groupId>
 		<artifactId>maven-repository</artifactId>
 		<version>1.0.0</version>
-		<relativePath>../pom.xml</relativePath>
+		<relativePath />
 	</parent>
 
 	<properties>
@@ -112,4 +112,16 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<id>dotterbear-maven-repository</id>
+			<url>https://github.com/dotterbear/maven-repository/raw/master/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>
