@@ -25,6 +25,7 @@
 	<modules>
 		<module>repo-java-format</module>
 		<module>repo-swagger-codegen</module>
+		<module>repo-service-parent</module>
 	</modules>
 
 	<pluginRepositories>
